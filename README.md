@@ -4,7 +4,7 @@
 
 上线客户端部分，导入微信开发者工具 修改config.js  restUrl(修改成本地api或者线下api 小程序部署到线上服务器需要https域名)
 
-这是小程序api地址(开发语言php thinkphp5K框架):
+这是小程序api地址(开发语言php thinkphp5K框架):https://github.com/coreymao/wxshop-api-
 
 技术栈：WXML+WXSS+JS+ES^+PHP(api)组合的小程序商城
 
