@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/interface/interface",
+    "pages/category/category",
+    "pages/my/my",
+    "pages/product/product",
+    "pages/theme/theme",
+    "pages/cart/cart",
+    "pages/order/order",
+    "pages/pay-result/pay-result",
+    "pages/about/about"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fbc33a",
+    "navigationBarTitleText": "汀贝爱町吧",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#F5F5F5",
+    "selectedColor": "#333",
+    "color": "#989898",
+    "borderStyle": "white",
+    "positon":"bottom",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "images/toolbar/home.png",
+      "selectedIconPath": "images/toolbar/home@selected.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "images/toolbar/category.png",
+        "selectedIconPath": "images/toolbar/category@selected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/toolbar/cart.png",
+        "selectedIconPath": "images/toolbar/cart@selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "用户",
+        "iconPath": "images/toolbar/my.png",
+        "selectedIconPath": "images/toolbar/my@selected.png"
+      }
+    ]
+  }
+
+
+}

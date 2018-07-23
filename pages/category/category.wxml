@@ -1,0 +1,26 @@
+<import src="../tpls/category/category-tpl.wxml"/>
+
+
+<view class="container category-container">
+  <view class="category-box">
+    <view class="left-box">
+      <block wx:for="{{categoryTypeArr}}">
+        <view class="menu-item {{ currentIndex==index?'selected':''}}" 
+        data-id="{{item.id}}" data-index="{{index}}" 
+        data-name="{{item.name}}" data-img="{{item.img.url}}"
+        bindtap="onCategoryItemTap">
+          {{item.name}}
+        </view>
+      </block>
+    </view>
+    <view class="right-box">
+      <template is="categorydetail" 
+      data="{{categoryInfo:categoryProducts}}">
+      </template>
+    </view>
+   
+
+
+  </view>
+   
+</view>

@@ -1,0 +1,99 @@
+.about-container {
+  align-items: inherit;
+}
+
+.about-head {
+  width: 100%;
+  height: 400rpx;
+}
+
+.about-head image {
+  width: 100%;
+  height: 100%;
+}
+
+/*内容区域*/
+
+.about-content {
+  margin-top: 20rpx;
+}
+
+.intro-header-box {
+  display: flex;
+  height: 80rpx;
+  border-bottom: 1px solid #ebebeb;
+  justify-content: space-between;
+}
+
+.tabs-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  color: #393938;
+}
+
+.tabs-item.selected {
+  border-bottom: 2px solid #fbc33a;
+  color: #fbc33a;
+}
+
+.intro-bottom-box .info {
+  padding: 30rpx 10rpx 0 50rpx;
+  line-height: 64rpx;
+  color: #666;
+}
+
+.intro-bottom-box .intro {
+  font-size: 28rpx;
+}
+
+.intro-bottom-box .contant {
+  font-size: 32rpx;
+  color: #393938;
+}
+
+.intro-bottom-box .contant-head {
+  font-size: 46rpx;
+  margin-bottom: 20rpx;
+}
+
+
+
+.intro-bottom-box .tel {
+  width: 80px;
+  height: 32px;
+  background: #fbc33a;
+  line-height: 32px;
+  padding-left: 32px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  position: relative;
+  color: #fff;
+}
+
+.intro-bottom-box .address {
+  color: #666;
+}
+
+.intro-bottom-box .tel-image {
+  width: 28px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+}
+.intro-bottom-box .tel-image image {
+  width: 100%;
+  height: 100%;
+}
+
+/*开发者 */
+.author {
+  font-size: 28rpx;
+  position: absolute;
+  bottom: 38rpx;
+  left: 220rpx;
+  font-style: italic;
+}

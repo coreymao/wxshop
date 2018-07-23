@@ -1,0 +1,9 @@
+.register,.pay{
+  height: 80rpx;
+  border-radius: 8rpx;
+  line-height: 80rpx;
+  color: #fff;
+  text-align: center;
+  background: green;
+  margin: 30rpx 0;
+}

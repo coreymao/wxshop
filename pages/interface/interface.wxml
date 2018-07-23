@@ -1,0 +1,6 @@
+<view>
+<text>coreymao</text>
+<text>接口测试</text>
+<view class='register' bindtap='getToken'>申请令牌</view>
+<view class='pay' bindtap='pay'>下订单</view>
+</view>

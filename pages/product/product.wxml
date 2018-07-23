@@ -1,0 +1,84 @@
+<view class="container detail-container">
+  <view class="detail-header-box">
+    <!-- 购物车图标 -->
+    <view class="fixed-btns-box" bindtap="tapToCart">
+      <view class="fiexd-cart  {{isShake?'animate':''}}">
+        <image src="../../images/icon/cart@top.png"></image>
+        <view wx:if="{{cartTotalCounts>0}}">{{cartTotalCounts}}</view>
+      </view>
+    </view>
+    <!-- 商品主图 -->
+    <view class="detail-topic-img">
+      <image src="{{product.main_img_url}}" mode='aspectFit'>
+      </image>
+    </view>
+    <!-- 加入购物车 -->
+    <view class="cart-box">
+      <view class="product-counts">
+        <picker range="{{countsArr}}" class="{{product.stock==0 ? 'disabled':'' }} " bindchange="bindPickerChange">
+          <view>
+            <text class="counts-tips">数量</text>
+            <text class="counts-data">{{productCount}}</text>
+            <image class="counts-icon" src="../../images/icon/arrow@down.png"></image>
+          </view>
+        </picker>
+      </view>
+      <view class="middle-border"></view>
+      <view bindtap="onAddingToCartTap"
+      class="add-cart-btn {{product.stock==0 ? 'disabled':'' }}">
+                 <text>加入购物车</text>
+                <image class="cart-icon" src="../../images/icon/cart.png"></image>
+                <image id="small-top-img" class="small-top-img {{isFly?'animate':''}}"
+                       src="{{product.main_img_url}}" mode="aspectFill" style="{{translateStyle}}"></image>
+      </view>
+    </view>
+    <!-- 基本信息 -->
+    <view class="basic-info-box">
+      <view class="stock" wx:if="{{product.stock > 0}}">有货</view>
+      <view class="stock no" wx:else>缺货</view>
+      <view class="name">{{product.name}}</view>
+      <view class="price">￥{{product.price}}</view>
+    </view>
+  </view>
+  <!-- 商品底部详情 -->
+  <view class="detail-bottom-box">
+  <view class="tabs-box">
+    <block wx:for="{{tabName}}" wx:key="{{index}}">
+        <view class="tabs-item {{currentTabsIndex==index?'selected':''}}" 
+        bindtap="onTabsItemTab"
+         data-index="{{index}}">
+        {{item}}
+        </view>
+    </block>
+  </view>
+
+  <view class="product-detail-box">
+
+  <view class="product-detail-imgs" hidden="{{currentTabsIndex!=0}}">
+    <block wx:for="{{product.imgs}}">
+      <image src="{{item.img_url.url}}"></image>
+    </block>
+  </view>
+
+  <view class="product-detail-properties" hidden="{{currentTabsIndex!=1}}">
+    <block wx:for="{{product.properties}}">
+      <view class="product-detail-params">
+        <view class="properties-name">{{item.name}}</view>
+        <view class="properties-detail">{{item.detail}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="product-detail-protect" hidden="{{currentTabsIndex!=2}}">
+    <view>支持7天无理由退货</view>
+  </view>
+  </view>
+
+  </view>
+
+
+
+
+
+
+
+</view>

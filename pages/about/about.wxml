@@ -1,0 +1,40 @@
+<view class='container about-container'>
+  <view class="about-head">
+    <image src="../../images/icon/company.png"></image>
+  </view>
+  <!-- 内容区域 -->
+  <view class="about-content">
+    <view class="intro-header-box">
+      <block wx:for="{{intro}}" wx:key="{{index}}">
+        <view class="tabs-item {{currentTabsIndex==index?'selected':''}}"
+        data-index="{{index}}"
+        bindtap="onTabsItemTab">{{item}}
+        </view>
+      </block>
+    </view>
+    <view class="intro-bottom-box">
+      <view class="info intro" hidden="{{currentTabsIndex!=0}}">{{introduce}}</view>
+      <view class=" position" 
+      hidden="{{currentTabsIndex!=1}}">
+        <map id="map" longitude="119.968122" latitude="31.733126" scale="14" controls="{{controls}}" bindcontroltap="controltap"
+         markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 260px;">
+         </map>
+      </view>
+      <view class="info contant" hidden="{{currentTabsIndex!=2}}">
+        <view class='contant-head'>CONTANT</view>
+        <view>刘经理:{{tel}}</view>
+        <view class='address'>{{addressInfo}}</view>
+        <view class="tel" bindtap='contact'>
+        <view class='tel-image'><image src='../../images/icon/tel.png'></image></view>
+        立即联系
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="author">
+    <view class="author-info"> created by caomao</view>
+  </view>
+  
+
+
+</view>

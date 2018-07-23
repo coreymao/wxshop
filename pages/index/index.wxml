@@ -1,0 +1,67 @@
+<import src="../tpls/products/products-tpl.wxml"/>
+
+<view class="container">
+  <!-- 图片swipter -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item class="banner-item" data-id="{{item.key_word}}" bindtap="onProductsItemTap">
+        <image src="{{item.img.url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+    <!-- nav分类icon -->
+  <view class="nav">
+    <view class="nav-car nav-slide" data-to="category" bindtap="navigateTo">
+      <image src="../../images/icon/item-icon.png" class="nav-img" />
+      <view class='nav-des'>商品</view>
+    </view>
+
+    <view class="nav-product nav-slide" data-to="cart" bindtap="navigateTo">
+      <image src="../../images/icon/car-icon.png" class="nav-img" />
+      <view class='nav-des'>购物车</view>
+    </view>
+
+    <view class="nav-user nav-slide" data-to="my" bindtap="navigateTo">
+      <image src="../../images/icon/user-icon.png" class="nav-img" />
+      <view class='nav-des'>个人中心</view>
+    </view>
+
+ 
+
+  </view>
+  <!-- 主体部分 -->
+  <view class='home-main'>
+  <!-- 主题部分 -->
+    <view class='home-main-theme'>
+      <view class='home-main-header'>推荐主题</view>
+      <view class='theme-box'>
+        <block wx:for="{{themeArr}}" wx:key="{{index}}">
+
+          <view wx:if="{{index==2}}" class="theme-item big"
+           data-id="{{item.id}}" data-desc="{{item.description}}" bindtap="onThemesItemTap">
+            <image src="{{item.topic_img.url}}"></image>
+          </view>
+          <view wx:else class="theme-item" data-id="{{item.id}}" 
+           data-desc="{{item.description}}" bindtap="onThemesItemTap">
+            <image src="{{item.topic_img.url}}"></image>
+          </view>
+
+        </block>
+
+      </view>
+    </view>
+  <!-- 最近商品部分 -->
+    <view class='home-main-products'>
+    <view class='home-main-header'>热卖商品</view>
+    <template is="products" data="{{product:productsArr}}"></template>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+</view>
