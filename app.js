@@ -3,7 +3,7 @@ import{ Token } from 'utils/token.js';
 App({
   onLaunch: function () {
     var token=new Token();
-    token.verify(); //获取token1255
+    token.verify(); //获取token-cao
 
 
   }
